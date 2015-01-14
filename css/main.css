@@ -1,0 +1,117 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  background-color: #000;
+
+  font: normal 100%/1.5 sans-serif;
+  color: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  text-align: center;
+}
+
+.clock-face {
+  background-image: url(../images/clock-face.svg);
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hand {
+  width: 14px;
+  position: absolute;
+  bottom: calc(150px - 7px);
+  left: calc(150px - 7px);
+  transform: rotate(0);
+  transition: all 6000ms linear;
+  transform-origin: bottom center;
+}
+
+.center {
+  width: 28px;
+  position: absolute;
+  top: calc(150px - 14px);
+  left: calc(150px - 14px);
+}
+
+.clock-face:target .hand-hour {
+  transform: rotate(360deg);
+}
+
+.clock-face:target .hand-minute {
+  transform: rotate(4320deg);
+}
+
+.green-circle:hover {
+  background-color: white;
+  color: black;
+}
+
+.red-circle:hover {
+  background-color: white;
+  color: black;
+}
+
+.green-circle {
+  background-color: green;
+  border-radius: 50%;
+  color: white;
+  width: 6em;
+  display: inline-block;
+  line-height: 6em;
+  text-decoration: none;
+  margin: 1em;
+  background-color: green;
+  transition: all 1000ms;
+}
+
+.red-circle {
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  width: 6em;
+  display: inline-block;
+  line-height: 6em;
+  text-decoration: none;
+  margin: 1em;
+  background-color: red;
+  transition: all 1000ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
